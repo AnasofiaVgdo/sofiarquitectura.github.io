@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamas de Equipos - Arquitectura de Computadoras</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #3498db;
+            background-color: #eaf2f8;
+            padding: 10px;
+            border-left: 5px solid #3498db;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #2980b9;
+            border-bottom: 1px dashed #3498db;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        .processor {
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .specs {
+            margin-left: 15px;
+        }
+        .spec-item {
+            margin-bottom: 8px;
+            display: flex;
+        }
+        .spec-label {
+            font-weight: bold;
+            min-width: 150px;
+            color: #2c3e50;
+        }
+        .pros-cons {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .pros {
+            color: #27ae60;
+        }
+        .cons {
+            color: #e74c3c;
+        }
+        .footer {
+            text-align: right;
+            margin-top: 40px;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Arquitectura de Computadoras</h1>
+        <h2>Gamas De Equipos</h2>
+    </div>
+
+    <section id="gama-baja">
+        <h2>GAMA BAJA</h2>
+
+        <div class="processor">
+            <h3>Intel Celeron G6900</h3>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos/Hilos:</span> 2 / 2</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia:</span> 3.4 GHz (sin Turbo)</div>
+                <div class="spec-item"><span class="spec-label">GPU integrada:</span> Intel UHD Graphics 710</div>
+                <div class="spec-item"><span class="spec-label">Cache:</span> 4MB L3</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 46W</div>
+                
+                <div class="pros-cons">
+                    <div class="pros"><span class="highlight">Pros:</span> Económico, bajo consumo.</div>
+                    <div class="cons"><span class="highlight">Contras:</span> No sirve para multitarea o juegos.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="processor">
+            <h3>AMD Athlon 3000G</h3>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos/Hilos:</span> 2 / 4</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia:</span> 3.5 GHz (sin Turbo)</div>
+                <div class="spec-item"><span class="spec-label">GPU integrada:</span> Radeon Vega 3</div>
+                <div class="spec-item"><span class="spec-label">Cache:</span> 5MB L3</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 35W</div>
+                
+                <div class="pros-cons">
+                    <div class="pros"><span class="highlight">Pros:</span> Gráficos integrados decentes, desbloqueado para overclock.</div>
+                    <div class="cons"><span class="highlight">Contras:</span> Solo compatible con DDR4 (limitado a placas AM4 antiguas).</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gama-media">
+        <h2>GAMA MEDIA</h2>
+
+        <div class="processor">
+            <h3>Intel Core i5-13400F</h3>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos/Hilos:</span> 10 (6P+4E) / 16</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia:</span> 2.5 GHz / 4.6 GHz (Turbo)</div>
+                <div class="spec-item"><span class="spec-label">GPU integrada:</span> No (requiere tarjeta gráfica)</div>
+                <div class="spec-item"><span class="spec-label">Cache:</span> 20MB L3</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 65W</div>
+                
+                <div class="pros-cons">
+                    <div class="pros"><span class="highlight">Pros:</span> Buen rendimiento en juegos y aplicaciones.</div>
+                    <div class="cons"><span class="highlight">Contras:</span> Sin gráficos integrados.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="processor">
+            <h3>AMD Ryzen 5 7600 (AM5)</h3>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos/Hilos:</span> 6 / 12</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia:</span> 3.8 GHz / 5.1 GHz</div>
+                <div class="spec-item"><span class="spec-label">GPU integrada:</span> Radeon Graphics (2 núcleos)</div>
+                <div class="spec-item"><span class="spec-label">Cache:</span> 32MB L3</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 65W</div>
+                
+                <div class="pros-cons">
+                    <div class="pros"><span class="highlight">Pros:</span> Soporta DDR5 y PCIe 5.0, eficiente.</div>
+                    <div class="cons"><span class="highlight">Contras:</span> Plataforma AM5 más cara (DDR5 obligatoria).</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gama-alta">
+        <h2>GAMA ALTA</h2>
+
+        <div class="processor">
+            <h3>Intel Core i9-14900K</h3>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos/Hilos:</span> 24 (8P+16E) / 32</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia:</span> 3.2 GHz / 6.0 GHz (Turbo)</div>
+                <div class="spec-item"><span class="spec-label">GPU integrada:</span> Intel UHD Graphics 770</div>
+                <div class="spec-item"><span class="spec-label">Cache:</span> 36MB L3</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 125W (hasta 253W en carga)</div>
+                
+                <div class="pros-cons">
+                    <div class="pros"><span class="highlight">Pros:</span> Máximo rendimiento en single-core y multi-core.</div>
+                    <div class="cons"><span class="highlight">Contras:</span> Alto consumo y calor.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="processor">
+            <h3>AMD Ryzen 9 7950X3D</h3>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos/Hilos:</span> 16 / 32</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia:</span> 4.2 GHz / 5.7 GHz</div>
+                <div class="spec-item"><span class="spec-label">GPU integrada:</span> Radeon Graphics (2 núcleos)</div>
+                <div class="spec-item"><span class="spec-label">Cache:</span> 128MB L3 (3D V-Cache)</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 120W</div>
+                
+                <div class="pros-cons">
+                    <div class="pros"><span class="highlight">Pros:</span> Excelente para gaming y productividad (mejor cache que Intel).</div>
+                    <div class="cons"><span class="highlight">Contras:</span> Precio elevado, requiere refrigeración robusta.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>Ana Sofia Villarreal Guajardo - Hora: 6:00 - 7:00 pm</p>
+    </div>
+</body>
+</html>

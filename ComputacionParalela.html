@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computación Paralela</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #3498db;
+            background-color: #eaf2f8;
+            padding: 10px;
+            border-left: 5px solid #3498db;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #2980b9;
+            border-bottom: 1px dashed #3498db;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        .content-box {
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .member {
+            background-color: #eaf2f8;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        .advantages-disadvantages {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .advantages, .disadvantages {
+            flex: 1;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .advantages {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+        }
+        .disadvantages {
+            background-color: #ffebee;
+            border-left: 4px solid #f44336;
+        }
+        .taxonomy {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .taxonomy-item {
+            padding: 15px;
+            background-color: #e3f2fd;
+            border-radius: 5px;
+            border-left: 4px solid #2196f3;
+        }
+        .parallelism-types {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .parallelism-item {
+            padding: 15px;
+            background-color: #fff8e1;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+        }
+        .architecture-comparison {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .architecture {
+            flex: 1;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .uma {
+            background-color: #e8eaf6;
+            border-left: 4px solid #3f51b5;
+        }
+        .numa {
+            background-color: #f3e5f5;
+            border-left: 4px solid #9c27b0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #eaf2f8;
+        }
+        .code-block {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .network-types {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .network-item {
+            padding: 15px;
+            background-color: #e0f7fa;
+            border-radius: 5px;
+            border-left: 4px solid #00bcd4;
+        }
+        .case-studies {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .case-item {
+            padding: 15px;
+            background-color: #f1f8e9;
+            border-radius: 5px;
+            border-left: 4px solid #8bc34a;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Equipo 4</h1>
+        <h2>COMPUTACIÓN PARALELA</h2>
+        <div class="team-members">
+            <div class="member">Alejandro Javier Rivera Romo</div>
+            <div class="member">Karla Cecilia Berumen Vazquez</div>
+            <div class="member">David Fernando Pavón Solís</div>
+            <div class="member">Joel Misael Leija de la Rosa</div>
+            <div class="member">Jared</div>
+        </div>
+    </div>
+
+    <section id="aspectos-basicos">
+        <h2>4.1 ASPECTOS BASICOS DE LA COMPUTACION PARALELA</h2>
+        <div class="content-box">
+            <p>La computación paralela es una técnica computacional, en la que varias instrucciones se ejecutan en simultaneo para ello se utilizan 2 o más elementos de procesamiento.</p>
+            <p>La computación paralela se basa en el principio de que los problemas grandes se pueden dividir en unos más pequeños que luego serán resueltos simultáneamente.</p>
+        </div>
+    </section>
+
+    <section id="ejemplo">
+        <h2>ENTENDAMOS MAS DE LA COMPUTACION PARALELA</h2>
+        <div class="content-box">
+            <p>Imagina que tienes que recoger 100 canicas del piso.</p>
+            <p>Si tú solo las recoges, te vas a tardar mucho tiempo.</p>
+            <p>Pero si invitas a 3 amigos y cada uno recoge una parte, terminan más rápido, porque todos trabajan al mismo tiempo.</p>
+            <p>Eso es computación paralela: varias personas (o computadoras) haciendo partes de un trabajo al mismo tiempo para terminar más rápido.</p>
+        </div>
+    </section>
+
+    <section id="ventajas-desventajas">
+        <h2>VENTAJAS Y DESVENTAJAS DE LA COMPUTACION PARALELA</h2>
+        <div class="advantages-disadvantages">
+            <div class="advantages">
+                <h3>VENTAJAS</h3>
+                <ul>
+                    <li>RESUELVE PROBLEMAS COMPLEJOS</li>
+                    <li>OBTENCIÓN DE RESULTADOS EN MENOS TIEMPO</li>
+                    <li>MEJOR BALANCE ENTRE RENDIMIENTO Y COSTO</li>
+                    <li>GRAN EXPANSIÓN Y ESCALABILIDAD</li>
+                </ul>
+            </div>
+            <div class="disadvantages">
+                <h3>DESVENTAJAS</h3>
+                <ul>
+                    <li>MAYOR CONSUMO DE ENERGÍA</li>
+                    <li>MAYOR DIFICULTAD AL PROGRAMAR</li>
+                    <li>DIFICULTAD EN LA SINCRONIZACIÓN Y COMUNICACIÓN</li>
+                    <li>MAYOR POSIBILIDAD DE FALLOS</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="taxonomia-flynn">
+        <h2>TAXONOMÍA DE FLYNN</h2>
+        <div class="content-box">
+            <h3>Taxonomía de Flynn (1966)</h3>
+            <div class="taxonomy">
+                <div class="taxonomy-item">
+                    <h4>SISD</h4>
+                    <p>Una instrucción, un dato.</p>
+                    <p>Computadoras tradicionales.</p>
+                </div>
+                <div class="taxonomy-item">
+                    <h4>MISD</h4>
+                    <p>Varias instrucciones, un solo dato.</p>
+                    <p>Poco común, usado en sistemas de control.</p>
+                </div>
+                <div class="taxonomy-item">
+                    <h4>SIMD</h4>
+                    <p>Una instrucción, muchos datos.</p>
+                    <p>Útil en gráficos y procesamiento de imágenes.</p>
+                </div>
+                <div class="taxonomy-item">
+                    <h4>MIMD</h4>
+                    <p>Varias instrucciones, muchos datos.</p>
+                    <p>Usado en computadoras modernas y servidores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tipos-paralelismo">
+        <h2>TIPOS DE PARALELISMO</h2>
+        <div class="parallelism-types">
+            <div class="parallelism-item">
+                <h3>1. Paralelismo a nivel de bit</h3>
+                <p>Opera múltiples bits al mismo tiempo dentro de un procesador.</p>
+                <p>Mejora la velocidad al procesar datos más grandes (por ejemplo, de 8 a 64 bits).</p>
+                <ul>
+                    <li>16 bits (1987)</li>
+                    <li>32 bits (1990)</li>
+                    <li>64 bits (1992)</li>
+                </ul>
+            </div>
+            <div class="parallelism-item">
+                <h3>2. Paralelismo de datos</h3>
+                <p>La misma operación se aplica a conjuntos distintos de datos.</p>
+                <p>Ejemplo: procesar miles de píxeles al mismo tiempo en una imagen (SIMD).</p>
+            </div>
+            <div class="parallelism-item">
+                <h3>3. Paralelismo a nivel de instrucción (ILP)</h3>
+                <p>Ejecuta varias instrucciones al mismo tiempo dentro de un solo procesador.</p>
+                <p>Usado en arquitecturas como pipeline o superescalar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="arquitecturas-memoria">
+        <h2>ARQUITECTURAS DE MEMORIA</h2>
+        <div class="architecture-comparison">
+            <div class="architecture uma">
+                <h3>4.1- ARQUITECTURA UMA</h3>
+                <p><strong>Memoria compartida (UMA)</strong></p>
+                <p>UMA significa Acceso Uniforme a Memoria (por sus siglas en inglés: Uniform Memory Access).</p>
+                <p>Es un tipo de arquitectura donde todos los procesadores comparten la misma memoria y la acceden a la misma velocidad.</p>
+                <h4>Características:</h4>
+                <ul>
+                    <li>Memoria central compartida.</li>
+                    <li>Todos los procesadores acceden a la memoria igual de rápido.</li>
+                    <li>Más fácil de programar.</li>
+                </ul>
+            </div>
+            <div class="architecture numa">
+                <h3>4.1- ARQUITECTURA NUMA</h3>
+                <p><strong>Memoria compartida (NUMA)</strong></p>
+                <p>NUMA significa Acceso No Uniforme a Memoria (Non-Uniform Memory Access).</p>
+                <p>Es una arquitectura donde cada procesador tiene su propia memoria local, pero también puede acceder a la memoria de otros procesadores, aunque más lento.</p>
+                <h4>Características:</h4>
+                <ul>
+                    <li>Cada procesador tiene memoria local.</li>
+                    <li>Acceso rápido a su propia memoria.</li>
+                    <li>Acceso más lento a la memoria de otros.</li>
+                    <li>Mejora el rendimiento en sistemas grandes.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="tipos-computacion-paralela">
+        <h2>4.2.1 TIPOS DE COMPUTACIÓN PARALELA</h2>
+        <div class="content-box">
+            <p>Los distintos tipos o arquitecturas de procesamiento en paralelo y cómo funcionan son:</p>
+            <ul>
+                <li><strong>SISD</strong> (Single Instruction, Single Data)</li>
+                <li><strong>MISD</strong> (Multiple Instruction, Single Data)</li>
+                <li><strong>SIMD</strong> (Single Instruction, Multiple Data)</li>
+                <li><strong>MIMD</strong> (Multiple Instruction, Multiple Data)</li>
+                <li><strong>SPMD</strong> (Single Program, Multiple Data)</li>
+                <li><strong>MPP</strong> (Massively Parallel Processing)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="sisd">
+        <h2>SISD (SINGLE INSTRUCTION, SINGLE DATA)</h2>
+        <div class="content-box">
+            <p>En el tipo de computación denominada Instrucción Única, Datos Únicos un único procesador se encarga de gestionar simultáneamente un algoritmo como una única fuente de datos.</p>
+            <p>SISD representa una organización informática que tiene una unidad de control, una de procesamiento y una de memoria similar a la computadora serie. SISD ejecuta las instrucciones secuencialmente y puede o no ser capaz de realizar procesamiento en paralelo, dependiendo de su configuración. Las instrucciones ejecutadas secuencialmente podrán cruzarse a lo largo de sus fases de ejecución. Es posible que haya más de una unidad funcional dentro de una computadora SISD. Sin embargo, una unidad de control está a cargo de todas las unidades funcionales.</p>
+            <p>Dichos sistemas permiten el procesamiento de tuberías o el uso de numerosas unidades funcionales para lograr un procesamiento paralelo.</p>
+        </div>
+    </section>
+
+    <section id="misd">
+        <h2>MISD (MULTIPLE INSTRUCTION, SINGLE DATA)</h2>
+        <div class="content-box">
+            <p>Los procesadores múltiples son estándar en las computadoras que utilizan Instrucción Múltiple, Datos Únicos (MISD). Al utilizar varios algoritmos, todos los procesadores comparten los mismos datos de entrada.</p>
+            <p>Las computadoras MISD pueden realizar simultáneamente muchas operaciones en el mismo lote de datos. Como era de esperar, la cantidad de operaciones se ve afectada por la cantidad de procesadores disponibles.</p>
+            <p>La estructura MISD consta de muchas unidades de procesamiento, cada una de las cuales opera según sus instrucciones y sobre un flujo de datos comparable. La salida de un procesador se convierte en la entrada del siguiente.</p>
+        </div>
+    </section>
+
+    <section id="simd">
+        <h2>SIMD (SINGLE INSTRUCTION, MULTIPLE DATA)</h2>
+        <div class="content-box">
+            <p>Las computadoras que utilizan la arquitectura SIMD (Instrucción Única, Datos Múltiples) tienen múltiples procesadores que ejecutan instrucciones idénticas. Sin embargo, cada procesador proporciona las instrucciones con su colección única de datos.</p>
+            <p>Las computadoras SIMD aplican el mismo algoritmo a varios conjuntos de datos. La arquitectura SIMD cuenta con varios componentes de procesamiento, los cuales están bajo la supervisión de una única unidad de control. Mientras procesa numerosos datos, cada uno recibe la misma instrucción de la unidad de control. Varios módulos incluidos en el subsistema compartido ayudan en la comunicación simultánea con cada CPU.</p>
+        </div>
+    </section>
+
+    <section id="mimd">
+        <h2>MIMD (MULTIPLE INSTRUCTION, MULTIPLE DATA)</h2>
+        <div class="content-box">
+            <ul>
+                <li><strong>Definición:</strong> Es un modelo de computación paralela donde múltiples procesadores ejecutan instrucciones diferentes sobre diferentes datos de forma simultánea.</li>
+                <li><strong>Ejemplo:</strong> Cada procesador en un sistema MIMD puede estar resolviendo una tarea distinta, como uno procesando imágenes y otro haciendo cálculos matemáticos.</li>
+                <li><strong>Uso:</strong> Muy común en supercomputadoras y sistemas multiprocesador, como servidores y clusters.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="spmd">
+        <h2>SPMD (SINGLE PROGRAM, MULTIPLE DATA)</h2>
+        <div class="content-box">
+            <ul>
+                <li><strong>Definición:</strong> Todos los procesadores ejecutan el mismo programa, pero operan sobre diferentes conjuntos de datos.</li>
+                <li><strong>Ejemplo:</strong> Varios núcleos ejecutando un mismo código para analizar distintas partes de un archivo grande.</li>
+                <li><strong>Uso:</strong> Muy usado en programación paralela moderna, como en CUDA (GPU) o MPI.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="mpp">
+        <h2>MPP (MASSVELY PARALLEL PROCESSING)</h2>
+        <div class="content-box">
+            <ul>
+                <li><strong>Definición:</strong> Arquitectura de sistemas donde muchos procesadores trabajan en paralelo para resolver un problema grande dividiéndolo en partes.</li>
+                <li><strong>Ejemplo:</strong> Miles de procesadores resolviendo un problema científico complejo al mismo tiempo.</li>
+                <li><strong>Uso:</strong> Utilizado en supercomputación, análisis de big data, simulaciones científicas, etc.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="arquitectura-secuencial">
+        <h2>4.2.2) ARQUITECTURA DE COMPUTADORAS SECUENCIALES</h2>
+        <div class="content-box">
+            <p><strong>¿QUÉ ES UNA COMPUTADORA SECUENCIAL?</strong></p>
+            <ul>
+                <li>Es aquella que ejecuta <strong>instrucciones una por una</strong>, de forma ordenada.</li>
+                <li>Solo hay <strong>un procesador</strong> o un núcleo, que procesa todas las instrucciones del programa.</li>
+                <li>Toda la lógica de control sigue una línea recta de ejecución (<strong>flujo secuencial</strong>).</li>
+                <li>Ejemplo: Si un programa tiene 1000 instrucciones, se ejecutan una tras otra, sin dividirlas entre varios núcleos o hilos.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="von-neumann">
+        <h2>MODELO VON NEUMANN Y EL CICLO DE INSTRUCCIÓN (F-D-E)</h2>
+        <div class="content-box">
+            <ul>
+                <li><strong>Unidad de procesamiento (CPU):</strong> interpreta y ejecuta instrucciones.</li>
+                <li><strong>Memoria principal (RAM):</strong> almacena datos e instrucciones.</li>
+                <li><strong>Unidad de control:</strong> dirige el flujo de instrucciones.</li>
+                <li><strong>Unidad aritmético-lógica (ALU):</strong> realiza operaciones matemáticas y lógicas.</li>
+                <li><strong>Bus de datos:</strong> transporta datos entre la memoria y el procesador.</li>
+            </ul>
+            <p><strong>Ciclo de instrucción:</strong></p>
+            <ol>
+                <li><strong>Fetch (Búsqueda):</strong> se obtiene la instrucción de la memoria.</li>
+                <li><strong>Decode (Decodificación):</strong> se interpreta qué debe hacer la CPU.</li>
+                <li><strong>Execute (Ejecución):</strong> la CPU realiza la acción (como una suma, acceso a memoria, etc.)</li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="diferencias-paralela">
+        <h2>DIFERENCIAS CON LA ARQUITECTURA PARALELA</h2>
+        <div class="content-box">
+            <ol>
+                <li><strong>Múltiples Unidades de Procesamiento (CPUs o núcleos)</strong>
+                    <ul>
+                        <li>Varios procesadores trabajan juntos.</li>
+                        <li>Cada procesador puede ejecutar una instrucción distinta al mismo tiempo.</li>
+                    </ul>
+                </li>
+                <li><strong>Memoria compartida o distribuida</strong>
+                    <ul>
+                        <li>Algunos sistemas comparten la memoria (como si todos miraran el mismo cuaderno).</li>
+                        <li>Otros tienen su propia memoria por separado (como si cada uno tuviera su propio cuaderno).</li>
+                    </ul>
+                </li>
+                <li><strong>Interconexión</strong>
+                    <ul>
+                        <li>Hay que comunicar los procesadores entre sí.</li>
+                        <li>Usan redes de interconexión para coordinar y compartir datos.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="organizacion-memoria">
+        <h2>LA ORGANIZACIÓN DE DIRECCIONES DE MEMORIA EN COMPUTACIÓN PARALELA</h2>
+        <div class="content-box">
+            <p>La organización de memoria se refiere a cómo se distribuyen, acceden y gestionan los datos en memoria cuando múltiples unidades de procesamiento (procesadores, hilos, núcleos) ejecutan tareas simultáneamente.</p>
+            <p><strong>Conceptos clave:</strong></p>
+            <ul>
+                <li>El rendimiento (latencia, ancho de banda)</li>
+                <li>La coherencia de datos</li>
+                <li>La comunicación entre procesos/hilos</li>
+                <li>La dificultad de programación</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="memoria-compartida">
+        <h2>MEMORIA COMPARTIDA (SHARED MEMORY)</h2>
+        <div class="content-box">
+            <p>Todos los hilos/procesadores comparten un mismo espacio de direcciones de memoria.</p>
+            <p>Este es el modelo que se usa típicamente en programas multihilo con Java usando Thread, ExecutorService, ForkJoinPool, etc.</p>
+            <div class="code-block">
+                <pre>public class ContadorCompartido {
+    private static int contador = 0;
+
+    public static void main(String[] args) throws InterruptedException {
+        Runnable tarea = () -> {
+            for (int i = 0; i < 1000; i++) {
+                contador++; // Access compatible (no seguro)
+            }
+        };
+        Thread hilo1 = new Thread(tarea);
+        Thread hilo2 = new Thread(tarea);
+
+        hilo1.start();
+        hilo2.start();
+
+        hilo1.join();
+        hilo2.join();
+
+        System.out.println("Contador final: " + contador);
+    }
+}</pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="memoria-distribuida">
+        <h2>MEMORIA DISTRIBUIDA (DISTRIBUTED MEMORY)</h2>
+        <div class="content-box">
+            <p>Cada procesador o nodo tiene su propia memoria local, y no puede acceder directamente a la memoria de los demás. La comunicación se realiza mediante paso de mensajes.</p>
+            <p>Este modelo se encuentra en:</p>
+            <ul>
+                <li>Clústeres de computadoras.</li>
+                <li>Sistemas con MPI.</li>
+                <li>Algunas arquitecturas NUMA.</li>
+            </ul>
+            <div class="code-block">
+                <pre>#include &lt;mpi.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main(int argc, char* argv[]) {
+    int size, rank;
+    
+    // Initialize entorno MPI
+    MPI_Init(&argc, &argv);
+    
+    // Obtiene el numero total de procesos
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+    
+    // Obtiene el identificador del proceso actual
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    
+    int total_elementos = 8;
+    int datos[8] = {1, 2, 3, 4, 5, 6, 7, 8};
+    
+    int elementos_por_proceso = total_elementos / size;
+    int* buffer_local = (int*)malloc(sizeof(int) * elementos_por_proceso);
+    
+    // Distribuye partes iguales del arreglo a cada proceso
+    MPI_Scatter(
+        datos, // Datos de entrada (en proceso raiz)
+        elementos_por_proceso, // Cuánto envía a cada proceso
+        MPI_INT, // Tipo de dato
+        buffer_local, // Buffer donde cada proceso recibe
+        elementos_por_proceso, // Cuánto recibe
+        MPI_INT, // Tipo
+        0, // Proceso raiz
+        MPI_COMM_WORLD // Comunicador
+    );
+    
+    // Cada proceso calcula la suma parcial de su bloque
+    int suma_local = 0;
+    for (int i = 0; i < elementos_por_proceso; i++) {
+        suma_local += buffer_local[i];
+    }
+    
+    // Proceso raiz recoge las sumas parciales
+    int suma_total = 0;
+    MPI_Reduce(
+        &suma_local, // Entrada local
+        &suma_total, // Resultado (solo válido en proceso raiz)
+        1, // Número de elementos
+        MPI_INT, // Tipo de dato
+        MPI_SUM, // Operación de reducción
+        0, // Proceso raiz
+        MPI_COMM_WORLD
+    );
+    
+    // Proceso raiz muestra el resultado final
+    if (rank == 0) {
+        printf("Suma total: %d\n", suma_total);
+    }
+    
+    // Limpieza
+    free(buffer_local);
+    MPI_Finalize();
+    return 0;
+}</pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="sistemas-memoria-compartida">
+        <h2>4.3 SISTEMAS DE MEMORIA COMPARTIDA</h2>
+        <div class="content-box">
+            <p>Un multiprocesador puede verse como un computador paralelo compuesto por varios procesadores interconectados que comparten un mismo sistema de memoria.</p>
+            <p>Los sistemas multiprocesadores son arquitecturas MIMD con memoria compartida.</p>
+            <p><strong>SE CLASIFICAN EN:</strong></p>
+            <p>Dependiendo de la forma en la que los procesadores comparten la memoria se clasifican en sistemas multi-procesador "UMA", "NUMA" y "COMA".</p>
+        </div>
+    </section>
+
+    <section id="redes-interconexion">
+        <h2>4.3.1 REDES DE INTERCONEXIÓN DINÁMICAS O INDIRECTAS</h2>
+        <div class="content-box">
+            <p>Las redes de interconexión indirectas son aquellas en las que los procesadores no están conectados directamente entre sí, sino a través de una serie de conmutadores intermedios. Estas redes permiten establecer rutas entre múltiples nodos a través de diversos caminos posibles.</p>
+            <p>El término "dinámicas" se refiere a la capacidad de estas redes de cambiar las rutas de comunicación entre nodos durante la operación, lo cual permite adaptarse a fallos, congestión o necesidades específicas del sistema.</p>
+            <p><strong>Características principales:</strong></p>
+            <ul>
+                <li>Escalables para muchos procesadores.</li>
+                <li>Soportan múltiples rutas entre origen y destino.</li>
+                <li>Utilizan técnicas de conmutación como conmutación de paquetes o circuitos.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="comparacion-redes">
+        <h2>4.3.1 COMPARACION DE REDES DINÁMICAS O INDIRECTAS</h2>
+        <div class="content-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Redes Directas</th>
+                        <th>Redes Indirectas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tipo de conexión</td>
+                        <td>Conexión directa entre nodos</td>
+                        <td>Conexión a través de conmutadores</td>
+                    </tr>
+                    <tr>
+                        <td>Topologías comunes</td>
+                        <td>Malla, anillo, hipercubo</td>
+                        <td>Árboles, MINs, Clos, Benes</td>
+                    </tr>
+                    <tr>
+                        <td>Ruta de comunicación</td>
+                        <td>Estática</td>
+                        <td>Dinámica / Reconfigurable</td>
+                    </tr>
+                    <tr>
+                        <td>Escalabilidad</td>
+                        <td>Limitada</td>
+                        <td>Alta</td>
+                    </tr>
+                    <tr>
+                        <td>Costo</td>
+                        <td>Menor (menos complejidad)</td>
+                        <td>Mayor (más hardware)</td>
+                    </tr>
+                    <tr>
+                        <td>Flexibilidad de tráfico</td>
+                        <td>Limitada</td>
+                        <td>Alta</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="redes-medio-compartido">
+        <h2>4.3.1.1) REDES DE MEDIO COMPARTIDO</h2>
+        <div class="content-box">
+            <p>Es un mecanismo que permite que varios procesos (o hilos) accedan y usen una misma región de memoria.</p>
+            <p>Esto significa que todos los dispositivos "escuchan" todas las transmisiones y solo responden a aquellas dirigidas a ellos. Este tipo de red es relativamente simple de implementar, pero puede tener problemas de rendimiento cuando hay mucho tráfico.</p>
+            <p><strong>EJEMPLOS</strong></p>
+            <ul>
+                <li>Ethernet compartido: En este caso, todos los dispositivos se conectan a un concentrador o hub, y el tráfico se transmite a todos los dispositivos conectados.</li>
+                <li>Wireless (Wi-Fi): En redes Wi-Fi, los dispositivos comparten el mismo canal de radio para comunicarse.</li>
+            </ul>
+            <p><strong>VENTAJAS Y DESVENTAJAS</strong></p>
+            <div class="advantages-disadvantages">
+                <div class="advantages">
+                    <h3>VENTAJAS</h3>
+                    <ul>
+                        <li>Simplicidad de implementación: Las redes de medio compartido son relativamente fáciles de configurar y mantener.</li>
+                        <li>Costo reducido: Requieren menos hardware y software que otros tipos de redes.</li>
+                    </ul>
+                </div>
+                <div class="disadvantages">
+                    <h3>DESVENTAJAS</h3>
+                    <ul>
+                        <li>Rendimiento limitado: El rendimiento de la red puede verse afectado por la cantidad de tráfico y la presencia de colisiones.</li>
+                        <li>Problemas de seguridad: Al compartir el mismo medio, las redes de medio compartido son más vulnerables a la escucha y a la manipulación de datos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="redes-conmutadas">
+        <h2>4.3.1.2) REDES CONMUTADAS</h2>
+        <div class="content-box">
+            <p>Son un tipo de red usada para interconectar varios procesadores o nodos en una arquitectura paralela.</p>
+            <p>En la arquitectura paralela, los procesadores tienen que comunicarse entre sí para coordinarse y compartir datos.</p>
+            <p>Entonces se necesita una estructura eficiente para:</p>
+            <ul>
+                <li>Enviar mensajes.</li>
+                <li>Compartir datos.</li>
+                <li>Coordinar tareas.</li>
+            </ul>
+            <p><strong>CONMUTACIÓN</strong></p>
+            <p>Conmutar significa <strong>cambiar de camino o ruta</strong>. Una red conmutada permite que los datos tomen diferentes rutas, dependiendo de:</p>
+            <ul>
+                <li>El destino del mensaje.</li>
+                <li>La congestión del camino.</li>
+                <li>Las decisiones del conmutador (como si fuera un semáforo inteligente).</li>
+            </ul>
+            <p><strong>ELEMENTOS DE UNA RED CONMUTADA</strong></p>
+            <ul>
+                <li><strong>Nodos:</strong> los procesadores o unidades que se comunican.</li>
+                <li><strong>Conmutadores:</strong> dispositivos que dirigen los datos por el mejor camino.</li>
+                <li><strong>Caminos posibles:</strong> conexiones entre nodos que pueden activarse o desactivarse según sea necesario.</li>
+            </ul>
+            <p><strong>TIPOS DE REDES CONMUTADAS</strong></p>
+            <div class="network-types">
+                <div class="network-item">
+                    <h4>Red de conmutación en anillo</h4>
+                    <ul>
+                        <li>Cada nodo está conectado con dos vecinos (como una rueda).</li>
+                        <li>Los datos viajan en una dirección hasta llegar a su destino.</li>
+                        <li>Simple.</li>
+                        <li>Puede tardar más si el destino está lejos.</li>
+                    </ul>
+                </div>
+                <div class="network-item">
+                    <h4>Red de conmutación en malla (mesh)</h4>
+                    <ul>
+                        <li>Cada nodo se conecta a varios vecinos (como una cuadrícula).</li>
+                        <li>Hay múltiples caminos posibles.</li>
+                        <li>Más rutas = más rapidez.</li>
+                        <li>Más compleja de gestionar.</li>
+                    </ul>
+                </div>
+                <div class="network-item">
+                    <h4>Red tipo hipercubo</h4>
+                    <ul>
+                        <li>Conexión en forma de cubo tridimensional (o más dimensiones).</li>
+                        <li>Muy eficiente para arquitecturas grandes.</li>
+                        <li>Ideal para muchos nodos.</li>
+                        <li>Difícil de implementar físicamente.</li>
+                    </ul>
+                </div>
+            </div>
+            <p><strong>TIPOS DE CONMUTACIÓN</strong></p>
+            <ul>
+                <li><strong>Conmutación de circuitos:</strong> Se establece un camino completo antes de enviar los datos. Es estable pero puede ser ineficiente.</li>
+                <li><strong>Conmutación de paquetes:</strong> Los datos se dividen en pequeños paquetes, cada uno puede tomar su propio camino. Es flexible y eficiente, pero puede causar retrasos y hay muchos datos viajando.</li>
+                <li><strong>Conmutación de mensajes:</strong> El mensaje completo se envía de un nodo al siguiente, uno por uno. Es fácil de entender e implementar pero es lento si hay muchos mensajes grandes.</li>
+            </ul>
+            <p><strong>VENTAJAS DE USAR REDES CONMUTADAS EN SISTEMAS PARALELOS</strong></p>
+            <ul>
+                <li><strong>ESCALABILIDAD:</strong> Se pueden agregar más nodos sin afectar tanto el sistema.</li>
+                <li><strong>FLEXIBILIDAD:</strong> Los datos pueden tomar múltiples caminos.</li>
+                <li><strong>EFICIENCIA:</strong> Si se diseña bien, se pueden evitar cuellos de botella.</li>
+                <li><strong>CONFIABILIDAD:</strong> Si un camino falla, se puede usar otro.</li>
+            </ul>
+            <p>Las redes conmutadas no son WiFi o Internet comunes, sino redes internas que conectan los procesadores o nodos dentro de una arquitectura paralela. Su buen diseño es clave para el rendimiento de supercomputadoras y clústeres.</p>
+        </div>
+    </section>
+
+    <section id="memoria-distribuida">
+        <h2>4.4 SISTEMAS DE MEMORIA DISTRIBUIDA: MULTIPROCESADORES</h2>
+        <div class="content-box">
+            <p><strong>MEMORIA DISTRIBUIDA (DISTRIBUTED MEMORY)</strong></p>
+            <p>Un sistema de memoria distribuida es una arquitectura donde cada procesador (CPU o nodo) tiene su propia memoria local privada, y no hay una memoria compartida centralizada como en los sistemas UMA o NUMA.</p>
+            <p>En lugar de acceder directamente a la memoria de otros procesadores, estos sistemas se comunican a través de mensajes. Por eso, también se les llama sistemas de paso de mensajes.</p>
+            <p><strong>SISTEMAS DE MEMORIA DISTRIBUIDA</strong></p>
+            <p>Cada nodo tiene:</p>
+            <ul>
+                <li>CPU(s)</li>
+                <li>Memoria RAM privada</li>
+                <li>Sistema operativo (puede ser o no compartido)</li>
+            </ul>
+            <p>Características:</p>
+            <ul>
+                <li>No existe una memoria global</li>
+                <li>La única forma de comunicación es mediante el envío de mensajes (como sockets, MPI, RPC, etc.)</li>
+                <li>Escalabilidad muy alta (usado en supercomputadoras y clústeres grandes)</li>
+                <li>Latencia de comunicación alta en comparación con accesos a memoria local</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="redes-interconexion-estaticas">
+        <h2>4.4.1 REDES DE INTERCONEXIÓN ESTÁTICAS</h2>
+        <div class="content-box">
+            <p>Una red de interconexión define cómo los procesadores o nodos están conectados entre sí para comunicarse en sistemas paralelos. En una red estática, la conectividad no cambia durante el tiempo de ejecución: está predefinida en la arquitectura del sistema.</p>
+            <p>En lugar de que todos estén conectados a todos (como en una red dinámica), aquí hay un patrón fijo.</p>
+            <p><strong>Topologías comunes:</strong></p>
+            <ul>
+                <li>Anillo (Ring)</li>
+                <li>Malla (Mesh)</li>
+                <li>Estrella (Star)</li>
+                <li>Completamente conectada (Fully Connected)</li>
+                <li>Línea (Line)</li>
+                <li>Árbol (Tree)</li>
+                <li>Bus</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="casos-estudio">
+        <h2>4.5 CASOS DE ESTUDIO</h2>
+        <div class="content-box">
+            <p>La computación paralela, que involucra dividir problemas en partes que se resuelven simultáneamente, se aplica en diversos campos. Un ejemplo es el procesamiento de grandes cantidades de datos en tiempo real, como en aplicaciones de aprendizaje automático o análisis de tráfico de red. También se utiliza para simular fenómenos complejos, como el clima o el flujo de fluidos, donde la capacidad de procesamiento paralelo es crucial para obtener resultados precisos y rápidos.</p>
+            <div class="case-studies">
+                <div class="case-item">
+                    <h3>Ciencia y tecnología médica</h3>
+                    <p>En la investigación médica, la computación paralela se utiliza para analizar imágenes médicas, modelar enfermedades y desarrollar nuevos tratamientos.</p>
+                </div>
+                <div class="case-item">
+                    <h3>Diseño y fabricación</h3>
+                    <p>La computación paralela se utiliza en la industria para simular procesos de fabricación, optimizar diseños de productos y realizar pruebas de rendimiento, lo que permite ahorrar tiempo y recursos.</p>
+                </div>
+                <div class="case-item">
+                    <h3>Inteligencia Artificial y aprendizaje automático</h3>
+                    <p>Los algoritmos de aprendizaje automático, que requieren procesar grandes cantidades de datos, se benefician enormemente de la computación paralela para entrenar modelos y realizar predicciones en tiempo real.</p>
+                </div>
+            </div>
+            <p><strong>Beneficios</strong></p>
+            <ul>
+                <li><strong>Aumento de la velocidad de procesamiento:</strong> La computación paralela permite realizar cálculos más rápido, lo que es especialmente importante para tareas que requieren un procesamiento intensivo.</li>
+                <li><strong>Ahorro de tiempo y recursos:</strong> Al acelerar el procesamiento, la computación paralela permite ahorrar tiempo y recursos, lo que es crucial para empresas y organizaciones que trabajan con grandes volúmenes de datos o que requieren realizar cálculos complejos.</li>
+                <li><strong>Resolución de problemas complejos:</strong> La computación paralela permite resolver problemas complejos que serían imposibles o muy difíciles de abordar con computación secuencial.</li>
+                <li><strong>Aprovechamiento de recursos:</strong> La computación paralela permite aprovechar al máximo los recursos informáticos, lo que es especialmente importante en entornos con gran cantidad de servidores o núcleos de CPU.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>GRACIAS</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura de Computadoras - CPUs</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #3498db;
+            background-color: #eaf2f8;
+            padding: 10px;
+            border-left: 5px solid #3498db;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #2980b9;
+            border-bottom: 1px dashed #3498db;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        .cpu {
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .cpu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-weight: bold;
+            color: #e67e22;
+            background-color: #fef5e7;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .specs {
+            margin-left: 15px;
+        }
+        .spec-item {
+            margin-bottom: 8px;
+            display: flex;
+        }
+        .spec-label {
+            font-weight: bold;
+            min-width: 200px;
+            color: #2c3e50;
+        }
+        .applications {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .app-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .footer {
+            text-align: right;
+            margin-top: 40px;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        .brand-title {
+            color: #e74c3c;
+            text-align: center;
+            margin: 30px 0 10px 0;
+            font-size: 1.5em;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #e67e22;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Arquitectura de Computadoras</h1>
+        <h2>CPUs</h2>
+    </div>
+
+    <div class="intro">
+        <p>La CPU es el componente principal que procesa las señales y hace posible la computación. Actúa como el cerebro de cualquier dispositivo de computación.</p>
+        <p>Obtiene instrucciones de la memoria, realiza las tareas necesarias y envía la salida a la memoria.</p>
+        <p>En esta presentación exploraremos ejemplos de CPUs a más detalle, dentro de las categorías de gama alta, media alta, media y baja. Esto de las dos marcas principales en el mercado, AMD e Intel.</p>
+    </div>
+
+    <div class="brand-title">Intel</div>
+
+    <section id="intel-gama-alta">
+        <h2>GAMA ALTA</h2>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>Intel Core i9-14900KS</h3>
+                <div class="price">$15,000MXN - $690USD</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos / Hilos:</span> 24 núcleos / 32 hilos</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia Base / Boost:</span> 3.2 GHz / 6.2 GHz</div>
+                <div class="spec-item"><span class="spec-label">Caché L1 / L2 / L3:</span> 2 MB / 32 MB / 36 MB</div>
+                <div class="spec-item"><span class="spec-label">Proceso de Fabricación:</span> Intel 10nm Enhanced SuperFin</div>
+                <div class="spec-item"><span class="spec-label">Socket:</span> LGA 1700</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 150W</div>
+                
+                <div class="applications">
+                    <div class="app-title">Aplicaciones:</div>
+                    <ul>
+                        <li>Gaming extremo en 4K con altas tasas de refresco</li>
+                        <li>Edición de video 8K y renderizado 3D avanzado (Premiere Pro, Blender)</li>
+                        <li>Streaming profesional con múltiples fuentes de video</li>
+                        <li>Simulaciones técnicas y científicas de alta demanda</li>
+                        <li>Creación de contenido multimedia y VFX avanzado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>Intel Core i9-14900K</h3>
+                <div class="price">$11,000MXN - $590USD</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos / Hilos:</span> 24 núcleos / 32 hilos</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia Base / Boost:</span> 3.2 GHz / 6.0 GHz</div>
+                <div class="spec-item"><span class="spec-label">Caché L1 / L2 / L3:</span> 2 MB / 32 MB / 36 MB</div>
+                <div class="spec-item"><span class="spec-label">Proceso de Fabricación:</span> Intel 10nm Enhanced SuperFin</div>
+                <div class="spec-item"><span class="spec-label">Socket:</span> LGA 1700</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 125W</div>
+                
+                <div class="applications">
+                    <div class="app-title">Aplicaciones:</div>
+                    <ul>
+                        <li>Gaming de alto rendimiento en 1440p y 4K</li>
+                        <li>Edición de video 4K/8K con múltiples capas de efectos</li>
+                        <li>Streaming y multitarea intensiva para creadores de contenido</li>
+                        <li>Trabajo con software de diseño CAD y simulaciones avanzadas</li>
+                        <li>Estaciones de trabajo avanzadas para producción multimedia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="intel-gama-media-alta">
+        <h2>GAMA MEDIA ALTA</h2>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>Intel Core i7-13700K</h3>
+                <div class="price">$9,000MXN - $420USD</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos / Hilos:</span> 16 núcleos / 24 hilos</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia Base / Boost:</span> 3.4 GHz / 5.4 GHz</div>
+                <div class="spec-item"><span class="spec-label">Caché L1 / L2 / L3:</span> 1.25 MB / 24 MB / 30 MB</div>
+                <div class="spec-item"><span class="spec-label">Proceso de Fabricación:</span> Intel 10nm Enhanced SuperFin</div>
+                <div class="spec-item"><span class="spec-label">Socket:</span> LGA 1700</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 125W</div>
+                
+                <div class="applications">
+                    <div class="app-title">Aplicaciones:</div>
+                    <ul>
+                        <li>Gaming de alto rendimiento en 1440p y 4K</li>
+                        <li>Edición de video 4K con buena capacidad multitarea</li>
+                        <li>Streaming en vivo con múltiples ventanas y chat activo</li>
+                        <li>Desarrollo de software y entornos de programación avanzados</li>
+                        <li>Creación de contenido digital para plataformas como YouTube y Twitch</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>Intel Core i5-13600K</h3>
+                <div class="price">6,000 MXN - $320 USD</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos / Hilos:</span> 14 núcleos / 20 hilos (6P + 8E)</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia Base / Boost:</span> 3.5 GHz / 5.1 GHz</div>
+                <div class="spec-item"><span class="spec-label">Caché L2 / L3:</span> 20 MB / 24 MB</div>
+                <div class="spec-item"><span class="spec-label">Proceso de Fabricación:</span> Intel 7 (10nm)</div>
+                <div class="spec-item"><span class="spec-label">Socket:</span> LGA 1700</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 125W (Máx.: 181W)</div>
+                
+                <div class="applications">
+                    <div class="app-title">Aplicaciones:</div>
+                    <ul>
+                        <li>Gaming de alto rendimiento en 1080p y 1440p</li>
+                        <li>Edición de video 4K y renderizado en programas como Premiere y DaVinci Resolve</li>
+                        <li>Streaming + multitarea sin afectar el rendimiento en juegos</li>
+                        <li>Programación y desarrollo de software con múltiples compilaciones y entornos virtuales</li>
+                        <li>Uso en estaciones de trabajo para productividad con Office, AutoCAD y Photoshop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="intel-gama-media">
+        <h2>GAMA MEDIA</h2>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>Intel Core i5-13400F</h3>
+                <div class="price">S4,200 MXN - $200 USD</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos / Hilos:</span> 10 núcleos / 16 hilos (6P + 4E)</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia Base / Boost:</span> 2.5 GHz / 4.6 GHz</div>
+                <div class="spec-item"><span class="spec-label">Caché L2 / L3:</span> 9.5 MB / 20 MB</div>
+                <div class="spec-item"><span class="spec-label">Proceso de Fabricación:</span> Intel 7 (10nm)</div>
+                <div class="spec-item"><span class="spec-label">Socket:</span> LGA 1700</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 65W (Máx: 148W)</div>
+                <div class="spec-item"><span class="spec-label">Gráficos Integrados:</span> ✗ No incluye (requiere tarjeta de video dedicada)</div>
+                
+                <div class="applications">
+                    <div class="app-title">Aplicaciones:</div>
+                    <ul>
+                        <li>Gaming de entrada y rendimiento sólido en 1080p con GPU dedicada</li>
+                        <li>Edición de video ligera y trabajos multitarea básicos</li>
+                        <li>Streaming y productividad, ideal para tareas de oficina y multitasking</li>
+                        <li>Buena opción para estaciones de trabajo económicas</li>
+                        <li>Excelente relación calidad-precio para jugadores con GPU dedicada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>Intel Core i5-12400F</h3>
+                <div class="price">$3,500 MXN - $160 USD</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos / Hilos:</span> 6 núcleos / 12 hilos (6P + OE)</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia Base / Boost:</span> 2.5 GHz / 4.4 GHz</div>
+                <div class="spec-item"><span class="spec-label">Caché L2 / L3:</span> 7.5 MB / 18 MB</div>
+                <div class="spec-item"><span class="spec-label">Proceso de Fabricación:</span> Intel 7 (10nm)</div>
+                <div class="spec-item"><span class="spec-label">Socket:</span> LGA 1700</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 65W (Máx: 117W)</div>
+                <div class="spec-item"><span class="spec-label">Gráficos Integrados:</span> No incluye (requiere tarjeta de video dedicada)</div>
+                
+                <div class="applications">
+                    <div class="app-title">Aplicaciones:</div>
+                    <ul>
+                        <li>Gaming en 1080p con buen rendimiento si se acompaña de una GPU dedicada</li>
+                        <li>Edición de video y diseño gráfico a nivel básico</li>
+                        <li>Trabajo de oficina y multitarea eficiente</li>
+                        <li>Opción equilibrada para estaciones de trabajo de bajo costo</li>
+                        <li>Buena alternativa para jugadores con presupuesto limitado que ya cuenten con una GPU</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="intel-gama-baja">
+        <h2>GAMA BAJA</h2>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>Intel Core i3-i3100F</h3>
+                <div class="price">i1,930.00 MXN - $95.22 USD</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos / Hilos:</span> 4 núcleos / 8 hilos</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia Base / Boost:</span> 3.4 GHz / 4.5 GHz (valores aproximados)</div>
+                <div class="spec-item"><span class="spec-label">Caché:</span> 12 MB Intel Smart Cache</div>
+                <div class="spec-item"><span class="spec-label">Proceso de Fabricación:</span> Intel 7 (10nm Enhanced)</div>
+                <div class="spec-item"><span class="spec-label">Socket:</span> LGA1700</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 60W</div>
+                
+                <div class="applications">
+                    <div class="app-title">Aplicaciones:</div>
+                    <ul>
+                        <li>Gaming en resolución 1080p con altos detalles</li>
+                        <li>Tareas de productividad y ofimática</li>
+                        <li>Edición de video y renderizado básico</li>
+                        <li>Uso general y multimedia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>Intel Core i3-12100</h3>
+                <div class="price">$2,799.00 MXN - $138.11 USD</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos / Hilos:</span> 4 núcleos / 8 hilos</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia Base / Boost:</span> 3.3 GHz / 4.3 GHz (valores aproximados)</div>
+                <div class="spec-item"><span class="spec-label">Caché:</span> 12 MB Intel Smart Cache</div>
+                <div class="spec-item"><span class="spec-label">Proceso de Fabricación:</span> Intel 7 (10nm process)</div>
+                <div class="spec-item"><span class="spec-label">Socket:</span> LGA1700</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 60W</div>
+                
+                <div class="applications">
+                    <div class="app-title">Aplicaciones:</div>
+                    <ul>
+                        <li>Gaming en resolución 1080p con rendimiento sólido</li>
+                        <li>Tareas de productividad y edición de contenido a nivel básico</li>
+                        <li>Uso en sistemas de trabajo y entretenimiento</li>
+                        <li>Solución ideal para PC de oficina y multimedia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="brand-title">AMD</div>
+
+    <section id="amd-gama-alta">
+        <h2>GAMA ALTA</h2>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>Ryzen 9 7950X3D</h3>
+                <div class="price">$14,499.00 MXN - $699 USD</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos / Hilos:</span> 16 núcleos / 32 hilos</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia Base / Boost:</span> 4.2 GHz / 5.7 GHz</div>
+                <div class="spec-item"><span class="spec-label">Caché L1 / L2 / L3:</span> 1 MB (64 KB por núcleo) / 8 MB / 128 MB</div>
+                <div class="spec-item"><span class="spec-label">Proceso de Fabricación:</span> TSMC 5 nm</div>
+                <div class="spec-item"><span class="spec-label">Socket:</span> AM5</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 120W</div>
+                
+                <div class="applications">
+                    <div class="app-title">Aplicaciones:</div>
+                    <ul>
+                        <li>Gaming de alto rendimiento (4K, Ray Tracing)</li>
+                        <li>Renderizado 3D en tiempo real (Blender, 3D Max)</li>
+                        <li>Edición de video BK (Premiere, DaVinci Resolve)</li>
+                        <li>Simulaciones científicas y técnicas</li>
+                        <li>Creación de contenido en general (VFX, modelado 3D)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>Ryzen 9 7900X</h3>
+                <div class="price">$8,129.00 MXN - $399 USD</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos / Hilos:</span> 12 núcleos / 24 hilos</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia Base / Boost:</span> 4.7 GHz / 5.6 GHz</div>
+                <div class="spec-item"><span class="spec-label">Caché L1 / L2 / L3:</span> 768 KB (64 KB por núcleo) / 12 MB / 64 MB</div>
+                <div class="spec-item"><span class="spec-label">Proceso de Fabricación:</span> TSMC 5 nm</div>
+                <div class="spec-item"><span class="spec-label">Zócalo Compatible:</span> AM5</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 170W</div>
+                
+                <div class="applications">
+                    <div class="app-title">Aplicaciones:</div>
+                    <ul>
+                        <li>Juegos AAA con configuraciones gráficas altas</li>
+                        <li>Renderizado 3D (para diseñadores y creadores de contenido)</li>
+                        <li>Simulaciones y modelado en ingeniería y ciencias</li>
+                        <li>Software de CAD (SolidWorks, AutoCAD)</li>
+                        <li>Edición de video (4K, 6K)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="amd-gama-media-alta">
+        <h2>GAMA MEDIA-ALTA</h2>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>Ryzen 7 9700X</h3>
+                <div class="price">$7,369.00 MXN - $359 USD</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos / Hilos:</span> 8 núcleos / 16 hilos</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia Base / Boost:</span> 4.5 GHz / 5.4 GHz</div>
+                <div class="spec-item"><span class="spec-label">Caché L1 / L2 / L3:</span> 512 KB (64 KB por núcleo) / 8 MB / 32 MB</div>
+                <div class="spec-item"><span class="spec-label">Proceso de Fabricación:</span> TSMC 5 nm</div>
+                <div class="spec-item"><span class="spec-label">Zócalo Compatible:</span> AM5</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 105W</div>
+                
+                <div class="applications">
+                    <div class="app-title">Aplicaciones:</div>
+                    <ul>
+                        <li>Juegos de alta calidad en 1440p o 4K</li>
+                        <li>Edición de video y audio (Adobe Premiere, Audition)</li>
+                        <li>Renderizado en 3D ligero a moderado</li>
+                        <li>Programación y desarrollo de software</li>
+                        <li>Diseño gráfico y CAD moderado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>AMD RUzen 7 7700X</h3>
+                <div class="price">$7,809.00 MXN</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos/Hilos:</span> 8 núcleos / 16 hilos</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia base/boost:</span> Hasta 5.4 GHz (frecuencia máxima de boost)</div>
+                <div class="spec-item"><span class="spec-label">Arquitectura:</span> Zen 4 (fabricación en 5 nm)</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 105 W</div>
+                
+                <div class="applications">
+                    <div class="app-title">Características destacadas:</div>
+                    <ul>
+                        <li>Ideal para jugadores exigentes y creadores de contenido que necesitan alto rendimiento en multitarea y aplicaciones pesadas.</li>
+                    </ul>
+                    
+                    <div class="app-title">Compatibilidad:</div>
+                    <ul>
+                        <li>Compatible con PCIe 5.0 y DDR5, lo que lo hace futuro-proof.</li>
+                        <li>Incluye tecnologías como Precision Boost 2 y AMD StoreMI para optimizar el rendimiento.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="amd-gama-media">
+        <h2>GAMA MEDIA</h2>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>AMD Ryzen 5 7600X</h3>
+                <div class="price">$6,076.95 MX</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos/Hilos:</span> 6 núcleos / 12 hilos</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia base/boost:</span> Hasta 5.3 GHz (frecuencia máxima de boost)</div>
+                <div class="spec-item"><span class="spec-label">Arquitectura:</span> Zen 4 (fabricación en 5 nm)</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 105 W</div>
+                
+                <div class="applications">
+                    <div class="app-title">Características destacadas:</div>
+                    <ul>
+                        <li>Excelente relación calidad-precio para gaming y productividad.</li>
+                        <li>Compatible con DDR5 y PCIe 5.0.</li>
+                        <li>Menor consumo energético comparado con generaciones anteriores.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>AMD Ryzen 5 7600X</h3>
+                <div class="price">$4,051.30 MX</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos/Hilos:</span> 6 núcleos / 12 hilos</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia base/boost:</span> Hasta 4.6 GHz (frecuencia máxima de boost)</div>
+                <div class="spec-item"><span class="spec-label">Arquitectura:</span> Zen 3 (fabricación en 7 nm)</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 65 W</div>
+                
+                <div class="applications">
+                    <div class="app-title">Características destacadas:</div>
+                    <ul>
+                        <li>Sigue siendo una opción relevante en términos de calidad-precio.</li>
+                    </ul>
+                    
+                    <div class="app-title">Compatibilidad:</div>
+                    <ul>
+                        <li>Compatible con DDR4 y PCIe 4.0.</li>
+                        <li>Incluye refrigerador Wraith Stealth en la caja.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="amd-gama-baja">
+        <h2>GAMA BAJA</h2>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>AMD Ryzen 5 5500</h3>
+                <div class="price">$1,562.95 MXN- $77.13 USD</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos / Hilos:</span> 6 núcleos / 12 hilos</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia Base / Boost:</span> 3.6 GHz / 4.2 GHz (valores aproximados)</div>
+                <div class="spec-item"><span class="spec-label">Caché L1 / L2 / L3:</span> 384 KB / 3 MB / 16 MB</div>
+                <div class="spec-item"><span class="spec-label">Proceso de Fabricación:</span> T5MC 7 nm</div>
+                <div class="spec-item"><span class="spec-label">Socket:</span> AM4</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 65W</div>
+                
+                <div class="applications">
+                    <div class="app-title">Aplicaciones:</div>
+                    <ul>
+                        <li>Gaming en resoluciones de 1080p a 1440p con buenas tasas de refresco</li>
+                        <li>Productividad y multitarea en aplicaciones de oficina y creativas</li>
+                        <li>Edición de video y renderizado moderado</li>
+                        <li>Creación de contenido y tareas generales de productividad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cpu">
+            <div class="cpu-header">
+                <h3>AMD Ryzen 3 5300G</h3>
+                <div class="price">Precio no especificado</div>
+            </div>
+            <div class="specs">
+                <div class="spec-item"><span class="spec-label">Núcleos / Hilos:</span> 4 núcleos / 8 hilos</div>
+                <div class="spec-item"><span class="spec-label">Frecuencia Base / Boost:</span> 3.6 GHz / 4.2 GHz (valores aproximados)</div>
+                <div class="spec-item"><span class="spec-label">Caché L1 / L2 / L3:</span> 256 KB / 2 MB / 8 MB</div>
+                <div class="spec-item"><span class="spec-label">Proceso de Fabricación:</span> T5MC 7 nm</div>
+                <div class="spec-item"><span class="spec-label">Socket:</span> AM4</div>
+                <div class="spec-item"><span class="spec-label">TDP:</span> 65W</div>
+                <div class="spec-item"><span class="spec-label">Gráficos Integrados:</span> Radeon Vega (6 núcleos) (modelo sujeto a variaciones)</div>
+                
+                <div class="applications">
+                    <div class="app-title">Aplicaciones:</div>
+                    <ul>
+                        <li>Gaming en resoluciones bajas a medias (ideal para 720p a 1080p) sin necesidad de tarjeta gráfica dedicada</li>
+                        <li>Uso general en tareas de oficina, multimedia y navegación</li>
+                        <li>Solución ideal para PC de escritorio de presupuesto limitado o sistemas compactos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>Ana Sofia Villarreal Guajardo - Hora: 6:00 - 7:00 pm</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Memorias - Arquitectura de Computadoras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #003366;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    ul {
+      list-style: square;
+      margin-left: 20px;
+    }
+    .equipo {
+      margin-bottom: 20px;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #0055aa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Memorias</h1>
+  <h2>Arquitectura de Computadoras</h2>
+
+  <div class="equipo">
+    <p><strong>Equipo:</strong></p>
+    <ul>
+      <li>Daniel Alejandro Sun Flores</li>
+      <li>Ana Sofia Villarreal Guajardo</li>
+      <li>Xicotencatl Saucedo Martinez</li>
+      <li>Yoshio Alberto González Padilla</li>
+      <li>Ana Gabriela Guevara Martínez</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>DDR2</h3>
+    <p>La DDR2 (Double Data Rate 2) fue un estándar de memoria RAM lanzado en 2003 como sucesora de la DDR1. Aunque hoy está obsoleta, fue ampliamente utilizada en equipos de los años 2000.</p>
+
+    <p><span class="highlight">Ventajas sobre DDR1:</span></p>
+    <ul>
+      <li>Menor consumo de energía (1.8V vs. 2.5V)</li>
+      <li>Mayor ancho de banda gracias al prefetch de 4 bits</li>
+    </ul>
+
+    <p><span class="highlight">Desventajas frente a DDR3/DDR4:</span></p>
+    <ul>
+      <li>Velocidades más bajas</li>
+      <li>Mayor latencia</li>
+      <li>Límite de capacidad (4 GB por módulo era raro)</li>
+    </ul>
+
+    <p><strong>Usos:</strong></p>
+    <ul>
+      <li>PCs y laptops (2004-2010)</li>
+      <li>Servidores y workstations</li>
+      <li>Consolas como PS3 (antigua) y Xbox 360 (GDDR3 derivada de DDR2)</li>
+    </ul>
+
+    <p><strong>Rendimiento actual:</strong></p>
+    <ul>
+      <li>Web básica: posible pero lenta</li>
+      <li>Windows 10/11: no recomendado</li>
+      <li>Juegos modernos: inviable</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>DDR3</h3>
+    <p><strong>Innovaciones frente a DDR2:</strong></p>
+    <ul>
+      <li>Menor voltaje (1.5V)</li>
+      <li>Frecuencia desde 800 MHz hasta 2133 MHz</li>
+      <li>Hasta 16 GB por módulo</li>
+      <li>Prefetch de 8 bits</li>
+    </ul>
+
+    <p><strong>Compatibilidad:</strong></p>
+    <ul>
+      <li>240 pines</li>
+      <li>Ranura distinta a DDR2</li>
+    </ul>
+
+    <p><strong>Beneficios:</strong></p>
+    <ul>
+      <li>Mejor rendimiento multitarea</li>
+      <li>Menor consumo en servidores</li>
+      <li>Mejor para juegos y edición</li>
+    </ul>
+
+    <p><strong>Especificaciones de DDR3 Kingston HyperX Fury:</strong></p>
+    <ul>
+      <li>Frecuencia: 1600 MHz</li>
+      <li>Transferencia: hasta 12.8 GB/s</li>
+      <li>Capacidad: 8 GB por módulo</li>
+      <li>Voltaje: 1.5V</li>
+      <li>Latencia: CL10</li>
+      <li>Pines: 240</li>
+      <li>Compatibilidad: placas DDR3</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>DDR4</h3>
+    <p><strong>Innovaciones frente a DDR3:</strong></p>
+    <ul>
+      <li>Menor voltaje: 1.2V</li>
+      <li>Frecuencias de 2133 MHz hasta 3200 MHz (o más)</li>
+      <li>Hasta 128 GB por módulo en servidores</li>
+      <li>Soporte para ECC</li>
+    </ul>
+
+    <p><strong>Compatibilidad:</strong></p>
+    <ul>
+      <li>288 pines (distintos a DDR3)</li>
+    </ul>
+
+    <p><strong>Beneficios:</strong></p>
+    <ul>
+      <li>Mejor para multitarea y edición de video</li>
+      <li>Menor consumo en laptops</li>
+      <li>Permite configuraciones profesionales</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>DDR5</h3>
+    <p><strong>Innovaciones frente a DDR4:</strong></p>
+    <ul>
+      <li>Doble ancho de banda</li>
+      <li>Frecuencia base: 4800 MHz (hasta 8400 MHz)</li>
+      <li>Hasta 128 GB por módulo</li>
+      <li>Voltaje: 1.1V</li>
+      <li>ECC on-die</li>
+      <li>PMIC en cada módulo</li>
+    </ul>
+
+    <p><strong>Compatibilidad:</strong></p>
+    <ul>
+      <li>288 pines (distintos a DDR4)</li>
+      <li>Sólo compatible con placas Intel 12th Gen y AMD Ryzen 7000+</li>
+    </ul>
+
+    <p><strong>Beneficios:</strong></p>
+    <ul>
+      <li>Mejor para IA, servidores y juegos modernos</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>¿Cuánta RAM es suficiente?</h3>
+    <ul>
+      <li>4GB – Insuficiente</li>
+      <li>8GB – Aceptable para tareas básicas</li>
+      <li>16GB – Ideal para gaming y edición ligera</li>
+      <li>32GB o más – Recomendado para diseño, IA y servidores</li>
+    </ul>
+  </div>
+
+  <h2>Gracias por la atención prestada</h2>
+
+</body>
+</html>

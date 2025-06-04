@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización de Equipos - Arquitectura de Computadoras</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #3498db;
+            background-color: #eaf2f8;
+            padding: 10px;
+            border-left: 5px solid #3498db;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #2980b9;
+            border-bottom: 1px dashed #3498db;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #eaf2f8;
+        }
+        .price-highlight {
+            font-weight: bold;
+            color: #e67e22;
+        }
+        .conclusion {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .recommendation {
+            margin-left: 20px;
+        }
+        .footer {
+            text-align: right;
+            margin-top: 40px;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        .description {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>TECNOLÓGICO NACIONAL DE MÉXICO<br>Instituto Tecnológico De Saltillo</h1>
+        <h2>Arquitectura De Computadoras<br>Cotización de equipos</h2>
+        <p><strong>Docente:</strong> Maldonado Leza Miguel</p>
+        <p><strong>Alumna:</strong> Ana Sofia Villarreal Guajardo</p>
+        <p><strong>Hora:</strong> 18:00-19:00 P.M</p>
+    </div>
+
+    <section id="gama-baja">
+        <h2>Cotización de equipos Gama Baja</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Componente</th>
+                    <th>(Economica)</th>
+                    <th>(Balanceada)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Procesador</td>
+                    <td>Intel Celeron N4020</td>
+                    <td>AMD Athlon 3000G</td>
+                </tr>
+                <tr>
+                    <td>GPU</td>
+                    <td>Intel UHD 600 (Integrada)</td>
+                    <td>AMD Vega 3 (Integrada)</td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>4GB DDR4 2400MHz</td>
+                    <td>8GB DDR4 2666MHz</td>
+                </tr>
+                <tr>
+                    <td>Almacenamiento</td>
+                    <td>128GB SSD SATA</td>
+                    <td>256GB SSD NVMe</td>
+                </tr>
+                <tr>
+                    <td>Fuente</td>
+                    <td>300W 80+ White</td>
+                    <td>400W 80+ Bronze</td>
+                </tr>
+                <tr>
+                    <td>Gabinete</td>
+                    <td>Genérico Mini-Tower</td>
+                    <td>Aerocool CS-101</td>
+                </tr>
+                <tr>
+                    <td>Precio Total</td>
+                    <td class="price-highlight">$4,200 MXN</td>
+                    <td class="price-highlight">$5,800 MXN</td>
+                </tr>
+                <tr>
+                    <td>Proveedor MTY</td>
+                    <td>PCEL</td>
+                    <td>DDTech</td>
+                </tr>
+                <tr>
+                    <td>Proveedor SLT</td>
+                    <td>Hiraoka</td>
+                    <td>Dabo Computers</td>
+                </tr>
+                <tr>
+                    <td>Garantía</td>
+                    <td>1 Año</td>
+                    <td>2 años (CPU/GPU)</td>
+                </tr>
+                <tr>
+                    <td>Soporte Técnico</td>
+                    <td>Ideal para tareas básicas</td>
+                    <td>Mejor rendimiento multitarea</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="description">
+            <p>Los equipos de gama baja están diseñados para usuarios con necesidades básicas de computación, como navegación web, procesamiento de textos, reproducción multimedia y tareas ofimáticas. Su principal ventaja es el bajo costo, pero sacrifican rendimiento en aplicaciones exigentes.</p>
+        </div>
+    </section>
+
+    <section id="gama-media">
+        <h2>Cotización equipos Gama Media</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Componente</th>
+                    <th>(Gaming)</th>
+                    <th>(Edición)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Procesador</td>
+                    <td>AMD Ryzen 5 5600G</td>
+                    <td>Intel i5-12400F</td>
+                </tr>
+                <tr>
+                    <td>GPU</td>
+                    <td>NVIDIA GTX 1660 Super</td>
+                    <td>AMD RX 6600</td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>16GB DDR4 3200MHz</td>
+                    <td>32GB DDR4 3600MHz</td>
+                </tr>
+                <tr>
+                    <td>Almacenamiento</td>
+                    <td>512GB NVMe SSD</td>
+                    <td>1TB NVMe + 2TB HDD</td>
+                </tr>
+                <tr>
+                    <td>Fuente</td>
+                    <td>550W 80+ Gold</td>
+                    <td>650W 80+ Gold</td>
+                </tr>
+                <tr>
+                    <td>Gabinete</td>
+                    <td>NZXT H510</td>
+                    <td>Lian Li Lancool 215</td>
+                </tr>
+                <tr>
+                    <td>Precio Total</td>
+                    <td class="price-highlight">$15,000 MXN</td>
+                    <td class="price-highlight">$18,500 MXN</td>
+                </tr>
+                <tr>
+                    <td>Proveedor MTY</td>
+                    <td>Cyberpuerta</td>
+                    <td>Digitalife</td>
+                </tr>
+                <tr>
+                    <td>Proveedor SLT</td>
+                    <td>Game Factor</td>
+                    <td>HighTech Gaming</td>
+                </tr>
+                <tr>
+                    <td>Garantía</td>
+                    <td>2 años (GPU: 3 años)</td>
+                    <td>3 años (RAM/SSD)</td>
+                </tr>
+                <tr>
+                    <td>Soporte Técnico</td>
+                    <td>60+ FPS en 1080p</td>
+                    <td>Renderizado rápido</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="description">
+            <p>Los equipos de gama media representan el punto óptimo entre precio y rendimiento, diseñados para usuarios que necesitan un balance perfecto entre capacidad y costo. Estos sistemas pueden manejar desde gaming casual hasta trabajo profesional moderado.</p>
+        </div>
+    </section>
+
+    <section id="gama-alta">
+        <h2>Cotización equipos Gama Alta</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Componente</th>
+                    <th>(4K Gaming)</th>
+                    <th>(Workstation)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Procesador</td>
+                    <td>Intel i7-13700K</td>
+                    <td>AMD Ryzen 9 7950X</td>
+                </tr>
+                <tr>
+                    <td>GPU</td>
+                    <td>NVIDIA RTX 4080</td>
+                    <td>NVIDIA RTX 4090</td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>32GB DDR5 6000MHz</td>
+                    <td>64GB DDR5 5600MHz</td>
+                </tr>
+                <tr>
+                    <td>Almacenamiento</td>
+                    <td>2TB NVMe Gen4</td>
+                    <td>2TB NVMe + 4TB HDD</td>
+                </tr>
+                <tr>
+                    <td>Fuente</td>
+                    <td>850W 80+ Platinum</td>
+                    <td>1000W 80+ Titanium</td>
+                </tr>
+                <tr>
+                    <td>Gabinete</td>
+                    <td>Corsair 5000D</td>
+                    <td>Fractal Define 7 XL</td>
+                </tr>
+                <tr>
+                    <td>Precio Total</td>
+                    <td class="price-highlight">$45,000 MXN</td>
+                    <td class="price-highlight">$65,000 MXN</td>
+                </tr>
+                <tr>
+                    <td>Proveedor MTY</td>
+                    <td>Novatech</td>
+                    <td>PCMig</td>
+                </tr>
+                <tr>
+                    <td>Proveedor SLT</td>
+                    <td>CompuShop</td>
+                    <td>TechSolutions</td>
+                </tr>
+                <tr>
+                    <td>Garantía</td>
+                    <td>3 Años</td>
+                    <td>5 años (Workstation)</td>
+                </tr>
+                <tr>
+                    <td>Soporte Técnico</td>
+                    <td>Gaming en 4K Ultra</td>
+                    <td>Renderizado 3D/IA</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="description">
+            <p>Los equipos de gama alta representan lo mejor del mercado actual, diseñados para usuarios exigentes que requieren máximo rendimiento en gaming 4K, producción profesional y aplicaciones intensivas. Estos sistemas no tienen compromisos en calidad ni potencia.</p>
+        </div>
+    </section>
+
+    <section id="conclusion">
+        <h2>Conclusión</h2>
+        
+        <div class="conclusion">
+            <p>Durante esta investigación logré aprender muchas cosas acerca de cómo elegir un equipo que se adapte a las necesidades o circunstancias en las que lo usarás. A continuación doy las recomendaciones que deberías seguir para que tu equipo sea apto a tus necesidades.</p>
+            
+            <h3>Elección según necesidades:</h3>
+            <ul class="recommendation">
+                <li>Priorizar gama baja para tareas simples y presupuestos ajustados.</li>
+                <li>Optar por gama media si se busca versatilidad y buen rendimiento sin excesos.</li>
+                <li>Invertir en gama alta solo si el trabajo o hobbies demandan potencia extrema.</li>
+            </ul>
+            
+            <h3>Recomendaciones adicionales:</h3>
+            <ul class="recommendation">
+                <li><span class="highlight">Monterrey vs. Saltillo:</span> Los precios en Monterrey suelen ser 5–10% más bajos por mayor competencia.</li>
+                <li><span class="highlight">Garantías:</span> Verificar coberturas (1–5 años según gama y proveedor).</li>
+                <li><span class="highlight">Futuro:</span> La gama media-alta ofrece mejor escalabilidad para actualizaciones.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="fuentes">
+        <h2>Fuentes</h2>
+        <ul>
+            <li>Cyberpuerta.mx: Hardware, Computadoras, Laptops & Más</li>
+            <li>DD Tech</li>
+            <li>Todo en Computadoras - Digitalife</li>
+            <li>PCEL Súper tienda de cómputo | Envío a todo México</li>
+        </ul>
+    </section>
+
+    <div class="footer">
+        <p>Ana Sofia Villarreal Guajardo - Hora: 18:00-19:00 P.M</p>
+    </div>
+</body>
+</html>
