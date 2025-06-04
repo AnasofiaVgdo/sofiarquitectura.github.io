@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura de Computadoras - Unidad 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            background-color: #f8f9fa;
+            padding: 8px;
+            border-left: 4px solid #3498db;
+        }
+        h3 {
+            color: #2980b9;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .definition {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .importance {
+            background-color: #e8f7f0;
+            padding: 15px;
+            border-left: 4px solid #2ecc71;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .example {
+            background-color: #fef9e7;
+            padding: 15px;
+            border-left: 4px solid #f39c12;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .cpu-case {
+            background-color: #f5eef8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #9b59b6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arquitectura de Computadoras - Unidad 2</h1>
+
+    <div class="section">
+        <h2>2.1 Registros visibles para el usuario</h2>
+        
+        <div class="definition">
+            <h3>¿Qué son?</h3>
+            <p>Los registros visibles para el usuario son aquellos que pueden ser accedidos directamente por los programadores para manipular datos y direcciones.</p>
+        </div>
+        
+        <h3>Tipos de registros visibles para el usuario</h3>
+        <ul>
+            <li><strong>Registros de datos:</strong> Almacenan valores numéricos para operaciones.</li>
+            <li><strong>Registros de direcciones:</strong> Contienen direcciones de memoria.</li>
+            <li><strong>Registros de propósito general:</strong> Usados para diferentes tareas según la necesidad del programa.</li>
+            <li><strong>Registros de condición:</strong> Guardan información sobre el resultado de una operación.</li>
+        </ul>
+        
+        <div class="importance">
+            <h3>Importancia</h3>
+            <p>Estos registros permiten que los programas accedan y manipulen datos de manera rápida, optimizando la ejecución de instrucciones. Los registros visibles para el usuario facilitan la programación y mejoran el rendimiento del procesador.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2.2.2 Registros de control y de estados</h2>
+        
+        <div class="definition">
+            <p>Estos registros son utilizados por la CPU para gestionar su operación y supervisar el estado del sistema. Son esenciales para el control interno del procesador, ya que almacenan información sobre la ejecución de instrucciones, posibles errores y condiciones específicas del hardware. Gracias a estos registros, la CPU puede tomar decisiones sobre su funcionamiento y garantizar que los procesos se realicen de manera estable y segura.</p>
+        </div>
+        
+        <h3>Registros de control</h3>
+        <p>Determinan el modo de operación de la CPU. Estos registros permiten gestionar cómo se ejecutan las instrucciones y configuran parámetros esenciales para el funcionamiento del procesador. Entre ellos se encuentran registros que controlan el acceso a memoria, la gestión de interrupciones y el manejo del contexto de los procesos.</p>
+        
+        <h3>Registros de estado</h3>
+        <p>Contienen información sobre el estado actual del procesador, como indicadores de errores o banderas de condición. Estos registros almacenan datos sobre los resultados de las operaciones realizadas por la CPU y permiten tomar decisiones sobre el flujo de ejecución del programa. Incluyen banderas de estado como el bit de desbordamiento (overflow), el bit de acarreo (carry) y el bit de cero, que ayudan a determinar el comportamiento de las instrucciones siguientes.</p>
+        
+        <div class="importance">
+            <h3>Importancia</h3>
+            <p>Estos registros permiten que el procesador funcione correctamente, asegurando que las instrucciones se ejecuten de manera eficiente y sin errores. Los registros de control y de estado son esenciales para la estabilidad y el control del procesador, permitiendo un funcionamiento eficiente.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2.2.3 Ejemplos de organización de registros de CPU reales</h2>
+        
+        <h3>Tipos de registros de la CPU</h3>
+        <ul>
+            <li><strong>Registros de propósito general:</strong> Usados para almacenar datos temporales y variables en operaciones. Ejemplo: AX, BX en x86.</li>
+            <li><strong>Registros de propósito específico:</strong> Incluyen el Contador de Programa (PC), que guarda la dirección de la siguiente instrucción, y el Registro de Instrucción (IR), que almacena la instrucción en ejecución.</li>
+            <li><strong>Registros de estado y control:</strong> Como el Registro de Banderas (FLAGS en x86), que almacena información sobre el estado del procesador.</li>
+            <li><strong>Registros de punto flotante:</strong> Usados para cálculos matemáticos avanzados (FPU en x86).</li>
+        </ul>
+        
+        <h3>Ejemplos de CPU reales</h3>
+        
+        <div class="example">
+            <h4>Arquitectura RISC-V</h4>
+            <ul>
+                <li>Utiliza 32 registros de propósito general (x0-x31), donde x0 siempre es cero.</li>
+                <li>Tiene registros especiales como el PC (Program Counter) y el CSR (Control and Status Registers).</li>
+                <li>Es ampliamente usada en sistemas embebidos y computación de alto rendimiento.</li>
+            </ul>
+        </div>
+        
+        <div class="example">
+            <h4>Arquitectura PowerPC (IBM)</h4>
+            <ul>
+                <li>Usa 32 registros de propósito general (GPR0-GPR31) para operaciones enteras.</li>
+                <li>Tiene 32 registros de punto flotante (FPR0-FPR31).</li>
+                <li>Incluye registros especiales como el LR (Link Register) para llamadas a subrutinas y el CTR (Count Register) para bucles.</li>
+            </ul>
+        </div>
+        
+        <div class="example">
+            <h4>Arquitectura x86 (Intel/AMD)</h4>
+            <ul>
+                <li>Registros de propósito general: EAX, EBX, ECX, EDX (para operaciones y almacenamiento de datos).</li>
+                <li>Registros especiales: ESP (Stack Pointer), EBP (Base Pointer), EIP (Instruction Pointer).</li>
+                <li>Registros de estado: EFLAGS (banderas como Zero Flag y Carry Flag).</li>
+                <li>Ejemplo real: Intel Core i7, AMD Ryzen usan esta organización.</li>
+            </ul>
+        </div>
+        
+        <div class="example">
+            <h4>Arquitectura ARM</h4>
+            <ul>
+                <li>Registros de propósito general: R0-R12 (para datos y parámetros de funciones).</li>
+                <li>Registros especiales: R13 (SP - Stack Pointer), R14 (LR - Link Register), R15 (PC - Program Counter).</li>
+                <li>Registros de estado: CPSR (almacena banderas y control del procesador).</li>
+                <li>Ejemplo real: Usado en procesadores de celulares y Raspberry Pi.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2.3 El ciclo de instrucción</h2>
+        
+        <h3>Etapas del ciclo de instrucción</h3>
+        <p>El ciclo de instrucción es el proceso mediante el cual la CPU ejecuta instrucciones, dividido en tres etapas principales:</p>
+        <ol>
+            <li><strong>Fetch (Búsqueda):</strong> Se obtiene la instrucción desde la memoria y se almacena en el IR.</li>
+            <li><strong>Decode (Decodificación):</strong> Se interpreta la instrucción y se determinan los registros y operaciones necesarias.</li>
+            <li><strong>Execute (Ejecución):</strong> Se realizan las operaciones y se almacenan los resultados.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>2.3.1 Ciclo Fetch-Decode-Execute</h2>
+        
+        <div class="importance">
+            <h3>Importancia</h3>
+            <p>El Ciclo de Instrucción (Fetch-Decode-Execute) es el proceso fundamental mediante el cual una CPU ejecuta instrucciones de un programa.</p>
+        </div>
+        
+        <h3>Fetch (Búsqueda de instrucción)</h3>
+        <ul>
+            <li>El procesador obtiene la instrucción desde la memoria RAM.</li>
+            <li>La dirección de la instrucción se encuentra en el contador de programa (PC, Program Counter).</li>
+            <li>La instrucción se almacena en el Registro de Instrucción (IR, Instruction Register).</li>
+        </ul>
+        
+        <h3>Decode (Decodificación de instrucción)</h3>
+        <ul>
+            <li>La CPU interpreta la instrucción para determinar qué operación realizar y qué operandos necesita.</li>
+            <li>Se activa la Unidad de Control para coordinar el proceso.</li>
+        </ul>
+        
+        <h3>Execute (Ejecución de instrucción)</h3>
+        <ul>
+            <li>Se realizan las operaciones necesarias:
+                <ul>
+                    <li>Si es una operación aritmética/Lógica, se usa la ALU (Unidad Aritmética y Lógica).</li>
+                    <li>Si implica memoria, se accede a los datos en RAM.</li>
+                    <li>Si es una instrucción de control, el flujo del programa cambia (saltos, llamadas a funciones).</li>
+                    <li>Los resultados pueden almacenarse en registros o en la memoria.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>2.3.2 Segmentación de instrucciones</h2>
+        
+        <div class="definition">
+            <h3>¿Qué es?</h3>
+            <p>La segmentación de instrucciones es una técnica que permite implementar el paralelismo a nivel de instrucción en un único procesador. La segmentación intenta tener ocupadas con instrucciones todas las partes del procesador dividiendo las instrucciones en una serie de pasos secuenciales que efectuarán distintas unidades de la CPU, tratando en paralelo diferentes partes de las instrucciones.</p>
+        </div>
+        
+        <h3>Técnica pipeline</h3>
+        <p>Es un conjunto de elementos de procesadores de datos conectados en serie, en donde la salida de un elemento es la entrada del siguiente. Los elementos del pipeline son generalmente ejecutados en paralelo, en esos casos, debe haber un almacenamiento tipo buffer insertado entre elementos.</p>
+        
+        <h3>Procesador de Pipeline</h3>
+        <p>Está compuesto por una lista de segmentos lineales y secuenciales en donde cada segmento lleva acabo una tarea o un grupo de tareas computacionales.</p>
+        
+        <table>
+            <tr>
+                <th>Etapa F</th>
+                <th>Etapa D</th>
+                <th>Etapa O</th>
+                <th>Etapa E</th>
+                <th>Etapa W</th>
+            </tr>
+            <tr>
+                <td>F₁</td>
+                <td>D₁</td>
+                <td>O₁</td>
+                <td>E₁</td>
+                <td>W₁</td>
+            </tr>
+            <tr>
+                <td>F₂</td>
+                <td>D₂</td>
+                <td>O₂</td>
+                <td>E₂</td>
+                <td>W₂</td>
+            </tr>
+            <tr>
+                <td>F₃</td>
+                <td>D₃</td>
+                <td>O₃</td>
+                <td>E₃</td>
+                <td>W₃</td>
+            </tr>
+        </table>
+        
+        <h3>Aplicaciones de pipeline</h3>
+        <ul>
+            <li><strong>Pipelines gráficos:</strong> Se encuentran en la mayoría de las tarjetas gráficas, consiste en múltiples unidades aritméticas o CPUs completas, que implementan variados escenarios de operaciones típicas de renderizado, por ejemplo, cálculos de luz y colores, renderizado, proyección de perspectiva, etc.</li>
+            <li><strong>Pipelines de software o tuberías:</strong> Consiste en múltiples procesos ordenados de tal forma que el flujo de salida de un proceso alimenta la entrada del siguiente proceso. Por ejemplo, los pipelines de Unix.</li>
+        </ul>
+        
+        <h3>Etapas de Ejecución</h3>
+        <ul>
+            <li><strong>Fetch:</strong> Alimentación de la instrucción (fetch).</li>
+            <li><strong>Decode:</strong> Decodificación de la instrucción.</li>
+            <li><strong>Operation:</strong> Extracción y calculo de los operandos.</li>
+            <li><strong>Execute:</strong> Ejecución (en la ALU).</li>
+            <li><strong>Write-back:</strong> Escritura del resultado (write).</li>
+        </ul>
+        
+        <h3>Ventajas</h3>
+        <ul>
+            <li>El tiempo de ciclos del procesador es reducido.</li>
+            <li>Aumenta el rendimiento del sistema.</li>
+            <li>Hace que el sistema sea confiable.</li>
+        </ul>
+        
+        <h3>Desventajas</h3>
+        <ul>
+            <li>El diseño de un procesador pipeline es complejo por lo tanto es más costoso de fabricar.</li>
+            <li>La latencia de instrucciones es más.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>2.3.3 Conjunto de instrucciones: Características y funciones</h2>
+        
+        <div class="definition">
+            <h3>¿Qué es?</h3>
+            <p>El conjunto de instrucciones es el conjunto de comandos o instrucciones que un procesador puede ejecutar. Define cómo el software interactúa con el hardware, especificando las operaciones que el procesador puede realizar, los tipos de datos soportados y el formato de las instrucciones.</p>
+        </div>
+        
+        <h3>Características de un conjunto de instrucciones</h3>
+        <ul>
+            <li><strong>Tipos de instrucciones:</strong>
+                <ul>
+                    <li>Aritméticas: Suma, resta, multiplicación, división.</li>
+                    <li>Lógicas: AND, OR, XOR, NOT.</li>
+                    <li>Transferencia de datos: MOV (mueve datos entre registros y memoria).</li>
+                </ul>
+            </li>
+            <li><strong>Cantidad de registros:</strong> Algunos procesadores tienen más registros para mejorar la eficiencia.</li>
+            <li><strong>Formato de instrucciones:</strong> Puede ser de longitud fija o variable.</li>
+        </ul>
+        
+        <h3>RISC vs CISC</h3>
+        <ul>
+            <li><strong>RISC (Reduced Instruction Set Computing):</strong>
+                <ul>
+                    <li>Instrucciones simples y rápidas.</li>
+                    <li>Menos modos de direccionamiento.</li>
+                    <li>Arquitecturas ARM, MIPS.</li>
+                </ul>
+            </li>
+            <li><strong>CISC (Complex Instruction Set Computing):</strong>
+                <ul>
+                    <li>Instrucciones más complejas y variadas.</li>
+                    <li>Mayor uso de memoria y modos de direccionamiento.</li>
+                    <li>Arquitectura x86 (Intel, AMD).</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>2.3.4 Modos de direccionamiento y formatos</h2>
+        
+        <div class="definition">
+            <h3>¿Qué es?</h3>
+            <ul>
+                <li>Los modos de direccionamiento son las diferentes maneras en las que un procesador puede acceder a los datos en memoria o registros. Determinan cómo se calcula la dirección del dato que se utilizará en una instrucción.</li>
+                <li>El formato de instrucción define la estructura de una instrucción en un procesador. Especifica cómo están organizados los diferentes campos dentro de una instrucción.</li>
+            </ul>
+        </div>
+        
+        <h3>Modos de Direccionamiento</h3>
+        <ul>
+            <li><strong>Direccionamiento inmediato:</strong> El operando está incluido en la propia instrucción.</li>
+            <li><strong>Direccionamiento directo o absoluto:</strong> La dirección de memoria donde se encuentra el operando está especificada en la instrucción.</li>
+            <li><strong>Direccionamiento indirecto:</strong> La dirección del operando se encuentra almacenada en un registro o en otra ubicación.</li>
+            <li><strong>Direccionamiento por registro:</strong> El operando se encuentra en un registro del procesador.</li>
+            <li><strong>Direccionamiento relativo:</strong> Se usa para instrucciones de salto y se basa en un desplazamiento respecto a la posición actual.</li>
+            <li><strong>Direccionamiento indexado:</strong> Se usa un registro índice más un desplazamiento para calcular la dirección del operando.</li>
+        </ul>
+        
+        <h3>Tipos de formatos</h3>
+        <ul>
+            <li><strong>Formato de longitud fija:</strong> Todas las instrucciones tienen el mismo tamaño.</li>
+            <li><strong>Formato de longitud variable:</strong> Las instrucciones pueden tener diferentes tamaños según su complejidad.</li>
+            <li><strong>Formato extendido:</strong> Permite incluir más operandos o modos de direccionamiento adicionales.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>2.4 Casos de estudio de CPU reales</h2>
+        
+        <div class="cpu-case">
+            <h3>1. Intel 8086 (1978) – El inicio de la arquitectura x86</h3>
+            <p><strong>Características clave:</strong></p>
+            <ul>
+                <li>Arquitectura de 16 bits</li>
+                <li>Frecuencia de reloj de 5-10 MHz</li>
+                <li>29,000 transistores</li>
+                <li>Conjunto de instrucciones CISC</li>
+            </ul>
+            <p><strong>Importancia:</strong></p>
+            <ul>
+                <li>Sentó las bases de la familia x86, que sigue dominando el mercado.</li>
+                <li>Introdujo el concepto de "segmentación de memoria", permitiendo gestionar más de 64 KB de RAM.</li>
+            </ul>
+        </div>
+        
+        <div class="cpu-case">
+            <h3>2. Intel Pentium (1993) – Avance en rendimiento y ejecución superscalar</h3>
+            <p><strong>Características clave:</strong></p>
+            <ul>
+                <li>Arquitectura de 32 bits</li>
+                <li>Frecuencia de hasta 66 MHz</li>
+                <li>Dos pipelines para ejecución 'superscalar'</li>
+                <li>Memoria cache L1 integrada</li>
+            </ul>
+            <p><strong>Importancia:</strong></p>
+            <ul>
+                <li>Introdujo la ejecución fuera de orden y técnicas de predicción de saltos para mejorar el rendimiento.</li>
+                <li>Popularizó la computación personal de alto rendimiento.</li>
+            </ul>
+        </div>
+        
+        <div class="cpu-case">
+            <h3>3. AMD Athlon 64 (2003) – Primer CPU de 64 bits para consumidores</h3>
+            <p><strong>Características clave:</strong></p>
+            <ul>
+                <li>Arquitectura x86-64 (compatible con 32 y 64 bits)</li>
+                <li>HyperTransport para comunicación rápida con el chipset</li>
+                <li>Controlador de memoria integrado en el procesador</li>
+                <li>Frecuencia de hasta 2.4 GHz</li>
+            </ul>
+            <p><strong>Importancia:</strong></p>
+            <ul>
+                <li>Permitió la transición a sistemas operativos y software de 64 bits.</li>
+                <li>Eliminó el cuello de botella en la comunicación con la RAM gracias al controlador integrado.</li>
+            </ul>
+        </div>
+        
+        <div class="cpu-case">
+            <h3>4. Intel Core i7-8700K (2017) – Más núcleos y mayor eficiencia</h3>
+            <p><strong>Características clave:</strong></p>
+            <ul>
+                <li>6 núcleos y 12 hilos (Hyper-Threading)</li>
+                <li>Frecuencia base de 3.7 GHz, turbo hasta 4.7 GHz</li>
+                <li>Proceso de fabricación de 14 nm</li>
+                <li>Cache L3 de 12 MB</li>
+            </ul>
+            <p><strong>Importancia:</strong></p>
+            <ul>
+                <li>Responde a la creciente demanda de 'procesamiento paralelo' en aplicaciones modernas.</li>
+                <li>Mejora en eficiencia energética con tecnologías como Speed Shift y Turbo Boost.</li>
+            </ul>
+        </div>
+        
+        <div class="cpu-case">
+            <h3>5. Apple M1 (2020) – Cambio a arquitectura ARM en computadoras personales</h3>
+            <p><strong>Características clave:</strong></p>
+            <ul>
+                <li>Basado en arquitectura ARM en lugar de x86</li>
+                <li>8 núcleos de CPU (4 de alto rendimiento, 4 de eficiencia)</li>
+                <li>Integración de CPU, GPU y memoria en un 'SoC (System on Chip)'</li>
+                <li>Alto rendimiento con bajo consumo de energía</li>
+            </ul>
+            <p><strong>Importancia:</strong></p>
+            <ul>
+                <li>Supone una revolución en la industria al mostrar que ARM puede competir con x86 en rendimiento.</li>
+                <li>Gran eficiencia energética, lo que permite mayor duración de batería en dispositivos portátiles.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
